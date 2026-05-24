@@ -71,7 +71,7 @@ return {
         browser = "helium",
         terminal = "kitty",
         text_editor = "dev.zed.Zed",
-        file_manager = "nautilus",
+        file_manager = "org.gnome.Nautilus.desktop",
     },
 
     -- Settings
