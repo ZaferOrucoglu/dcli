@@ -1,0 +1,35 @@
+/* kanagawa-dragon */
+
+@define-color bg0 #0d0c0c;
+@define-color bg1 #181616;
+@define-color bg2 #1e1c1c;
+@define-color bg3 #282727;
+@define-color bg4 #2d2b2b;
+
+@define-color fg     #c5c9c5;
+@define-color red    #c4746e;
+@define-color orange #e46876;
+@define-color yellow #c4b28a;
+@define-color green  #8a9a7b;
+@define-color aqua   #8ea4a2;
+@define-color blue   #8ba4b0;
+@define-color purple #a292a3;
+
+@define-color grey0 #0d0c0c;
+@define-color grey1 #a6a69c;
+@define-color grey2 #c8c093;
+
+/* Semantic aliases used by the config */
+@define-color background @bg1;
+@define-color background-alt @bg2;
+@define-color hover @bg3;
+@define-color selected @blue;
+
+@define-color text @fg;
+@define-color text-alt @grey0;
+
+@define-color notification-bg @bg1;
+@define-color center-bg @bg0;
+@define-color center-notification-bg @bg2;
+
+@define-color urgent @red;

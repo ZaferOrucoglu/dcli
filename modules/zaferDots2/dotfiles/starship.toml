@@ -1,0 +1,165 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# =============================================================================
+# Starship Configuration - 2 Line Style
+# Theme: Kanagawa Dragon
+#
+# Preview:
+# ╭─  in ~/projects/dots on  main
+# ╰─ ❯
+# =============================================================================
+
+format = """
+[╭─](dragon_grey)\
+$os\
+$directory\
+$git_branch\
+$git_status\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$python\
+$docker_context\
+$conda\
+$line_break\
+$character"""
+
+# Define Kanagawa Dragon Palette
+palette = "kanagawa_dragon"
+
+[palettes.kanagawa_dragon]
+background = "#181616"
+foreground = "#c5c9c5"
+dragon_red = "#c4746e"
+dragon_green = "#8a9a7b"
+dragon_yellow = "#c4b28a"
+dragon_blue = "#7fb4ca"
+dragon_magenta = "#938aa9"
+dragon_cyan = "#7aa89f"
+dragon_orange = "#b6927b"
+dragon_grey = "#727169"
+
+# ------------------------------------------------------------------------------
+# Core UI Elements
+# ------------------------------------------------------------------------------
+
+[character]
+success_symbol = "[╰─](dragon_grey) [❯](bold dragon_green)"
+error_symbol = "[╰─](dragon_grey) [❯](bold dragon_red)"
+vimcmd_symbol = "[╰─](dragon_grey) [❮](bold dragon_green)"
+
+[line_break]
+disabled = false
+
+[directory]
+style = "bold dragon_blue"
+read_only = " "
+truncation_length = 4
+truncation_symbol = "…/"
+format = 'in [$path]($style)[$read_only]($style) '
+
+[os]
+disabled = false
+style = "dragon_cyan"
+format = ' [$symbol]($style)' # Space before symbol for padding
+
+[os.symbols]
+Arch = " "
+Ubuntu = " "
+Debian = " "
+Fedora = " "
+Linux = " "
+Macos = " "
+Windows = " "
+Manjaro = " "
+Gentoo = "ji "
+EndeavourOS = " "
+NixOS = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Artix = " "
+CentOS = " "
+FreeBSD = " "
+Kali = " "
+Mint = " "
+OpenBSD = " "
+openSUSE = " "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Solus = "ﴱ "
+SUSE = " "
+Void = " "
+CachyOS = " " # Cachy uses Arch icon often, or custom if font supports it
+
+# ------------------------------------------------------------------------------
+# Git Integration
+# ------------------------------------------------------------------------------
+
+[git_branch]
+symbol = " "
+style = "bold dragon_magenta"
+format = 'in [$symbol$branch]($style) '
+
+[git_status]
+style = "dragon_red"
+format = '([$all_status$ahead_behind]($style) )'
+ahead     = "[⇡${count}](dragon_green) "
+behind    = "[⇣${count}](dragon_red) "
+modified  = "[✎${count}](dragon_yellow) "
+staged    = "[+${count}](dragon_bluen) "
+untracked = "[?${count}](dragon_cyan) "
+
+# ------------------------------------------------------------------------------
+# Language & Tool Versions (Shown only when files exist)
+# ------------------------------------------------------------------------------
+
+[c]
+symbol = " "
+style = "dragon_yellow"
+format = 'via [$dragon_bluebol($version )]($style)'
+
+[docker_context]
+symbol = " "
+style = "dragonBlue"
+format = 'via [$symbol$context]($style) '
+
+[golang]
+symbol = " "
+style = "dragonBlue"
+format = 'via [$symbol($version )]($style)'
+
+[java]
+symbol = " "
+style = "dragon_red"
+format = 'via [$symbol($version )]($style)'
+
+[nodejs]
+symbol = " "
+style = "dragon_green"
+format = 'via [$symbol($version )]($style)'
+
+[php]
+symbol = " "
+style = "dragonBlue"
+format = 'via [$symbol($version )]($style)'
+
+[python]
+symbol = "🐍 "
+style = "dragon_yellow"
+format = 'via [$dragon_bluebol($version )(\($virtualenv\) )]($style)'
+
+[rust]
+symbol = " "
+style = "dragon_red"
+format = 'via [$symbol($version )]($style)'
+
+[conda]
+symbol = " "
+style = "dragon_green"
+format = 'via [$symbol$environment]($style)'

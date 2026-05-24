@@ -1,0 +1,17 @@
+return {
+    bg = "181616",
+    bg2 = "0d0c0c",
+    bg3 = "1e1c1c",
+    bg4 = "282727",
+    fg = "c5c9c5",
+    red = "c4746e",
+    orange = "e46876",
+    yellow = "c4b28a",
+    green = "8a9a7b",
+    aqua = "8ea4a2",
+    blue = "8ba4b0",
+    purple = "a292a3",
+    gray0 = "0d0c0c",
+    gray1 = "a6a69c",
+    gray2 = "c8c093",
+}
