@@ -1,7 +1,7 @@
 local packages = {
     "easyeffects",
     "lsp-plugins",
-    "gst-plugins-pipewire"
+    "gst-plugin-pipewire"
 }
 
 return {

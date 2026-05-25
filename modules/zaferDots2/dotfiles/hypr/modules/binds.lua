@@ -40,8 +40,9 @@ local directions = {
 }
 for _, dir in ipairs(directions) do
     hl.bind(mainMod .. " + " .. dir, hl.dsp.focus({ direction = dir }))
-    hl.bind(mainMod .. " + SHIFT + " .. dir, hl.dsp.window.move({ direction = dir }))
 end
+hl.bind(mainMod .. " + SHIFT + left", hl.dsp.layout("swapcol l"))
+hl.bind(mainMod .. " + SHIFT + right", hl.dsp.layout("swapcol r"))
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
