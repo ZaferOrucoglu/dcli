@@ -65,3 +65,9 @@ hl.window_rule({
     match = { class = "hyprland-share-picker" },
     float = true
 })
+
+hl.window_rule({
+    name = "bitwarden extension",
+    match = { title = "Bitwarden" },
+    float = true
+})
