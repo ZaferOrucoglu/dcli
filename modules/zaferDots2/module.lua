@@ -50,7 +50,6 @@ local packages = {
     "vesktop",
     "btop",
     "pavucontrol",
-    "gpu-screen-recorder-gtk-git",
 }
 
 return {
