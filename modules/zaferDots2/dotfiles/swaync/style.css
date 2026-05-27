@@ -276,6 +276,8 @@
     font-family: "CaskaydiaCove Nerd Font Propo";
     font-size: 16px;
     color: @text;
+    text-align: center;
+    min-width: 0;
 }
 
 .widget-buttons-grid button:hover {
@@ -338,4 +340,7 @@
 /* Avoid 'annoying' backgroud */
 .blank-window {
     background: transparent;
+}
+.widget-buttons-grid flowbox {
+    halign: center;
 }

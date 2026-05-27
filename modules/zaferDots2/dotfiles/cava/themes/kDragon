@@ -1,0 +1,23 @@
+[color]
+
+background = '#181616'
+foreground = '#c5c9c5'
+
+gradient = 1
+gradient_color_1 = '#8ba4b0'
+gradient_color_2 = '#8ea4a2'
+gradient_color_3 = '#8a9a7b'
+gradient_color_4 = '#a6a69c'
+gradient_color_5 = '#c4b28a'
+gradient_color_6 = '#e46876'
+gradient_color_7 = '#c4746e'
+gradient_color_8 = '#a292a3'
+
+horizontal_gradient = 1
+horizontal_gradient_color_1 = '#8ba4b0'
+horizontal_gradient_color_2 = '#8ea4a2'
+horizontal_gradient_color_3 = '#8a9a7b'
+horizontal_gradient_color_4 = '#c4b28a'
+horizontal_gradient_color_5 = '#e46876'
+
+blend_direction = 'up'

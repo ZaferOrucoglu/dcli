@@ -6,7 +6,7 @@
 local terminal    = "kitty"
 local fileManager = "nautilus"
 -- local menu        = "~/.config/rofi/type-2/launcher.sh"
-local menu        = "vicinae open"
+local menu        = "vicinae toggle"
 ---------------------
 ---- KEYBINDINGS ----
 ---------------------
@@ -21,12 +21,14 @@ hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("helium-browser"))
 hl.bind(mainMod .. " + C",
     hl.dsp.exec_cmd(
         "/usr/bin/codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"))
+hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae vicinae://launch/clipboard/history?toggle=true"))
+
 -- screenshot & window management
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --raw --freeze | satty -f -"))
 hl.bind(mainMod .. " + M",
     hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
-hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
 hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())

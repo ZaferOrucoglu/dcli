@@ -71,3 +71,10 @@ hl.window_rule({
     match = { title = "Bitwarden" },
     float = true
 })
+
+hl.layer_rule({
+    match = { namespace = "vicinae" },
+    name = "vicinae-blur",
+    blur = true,
+    ignore_alpha = 0,
+})

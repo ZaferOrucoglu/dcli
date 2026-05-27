@@ -50,6 +50,7 @@ local packages = {
     "vesktop",
     "btop",
     "pavucontrol",
+    "sassc",
 }
 
 return {

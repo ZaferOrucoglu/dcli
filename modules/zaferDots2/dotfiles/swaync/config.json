@@ -20,7 +20,7 @@
 
   "keyboard-shortcuts": true,
   "image-visibility": "when-available",
-  "transition-time": 200,
+  "transition-time": 0,
   "hide-on-clear": false,
   "hide-on-action": false,
   "script-fail-notify": true,
@@ -52,6 +52,7 @@
     },
 
     "buttons-grid": {
+      "columns": 7,
       "actions": [
         {
           "label": "󰌪",
@@ -60,33 +61,33 @@
           "update-command": "bash -c '$HOME/.local/bin/powerprofile --is-quiet'"
         },
         {
-          "label": "",
+          "label": "󰓅",
+          "type": "toggle",
+          "command": "bash -c 'CURRENT=$($HOME/.local/bin/powerprofile --get); [ \"$CURRENT\" = performance ] && $HOME/.local/bin/powerprofile balanced || $HOME/.local/bin/powerprofile performance'",
+          "update-command": "bash -c '[ $($HOME/.local/bin/powerprofile --get) = performance ] && echo true || echo false'"
+        },
+        {
+          "label": " ",
           "type": "toggle",
           "command": "bash -c '$HOME/.local/bin/caffeine'",
           "update-command": "bash -c '$HOME/.local/bin/caffeine --is-running'"
         },
         {
-          "label": "",
+          "label": " ",
           "type": "toggle",
           "command": "bash -c '$HOME/.local/bin/mictoggle --silent'",
           "update-command": "bash -c '$HOME/.local/bin/mictoggle --is-muted'"
         },
         {
-          "label": "",
+          "label": " ",
           "command": "hyprctl dispatch exec alacritty -- -e htop ; swaync-client -cp"
         },
         {
-          "label": "󰃟",
-          "type": "toggle",
-          "command": "bash -c '$HOME/.local/bin/themesw'",
-          "update-command": "bash -c '[ $($HOME/.local/bin/themesw --current) = light ] && echo true || echo false'"
-        },
-        {
-          "label": "",
+          "label": " ",
           "command": "hyprctl dispatch exec nwg-look ; swaync-client -cp"
         },
         {
-          "label": "",
+          "label": " ",
           "command": "swaync-client -cp ; bash -c $HOME/.config/rofi/bin/logout"
         }
       ]
