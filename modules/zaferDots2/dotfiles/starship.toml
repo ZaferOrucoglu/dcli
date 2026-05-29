@@ -27,7 +27,9 @@ $conda\
 $line_break\
 $character"""
 
-# Define Kanagawa Dragon Palette
+# ------------------------------------------------------------------------------
+# Color Palette
+# ------------------------------------------------------------------------------
 palette = "kanagawa_dragon"
 
 [palettes.kanagawa_dragon]
@@ -41,6 +43,18 @@ dragon_magenta = "#938aa9"
 dragon_cyan = "#7aa89f"
 dragon_orange = "#b6927b"
 dragon_grey = "#727169"
+
+[palettes.catpuccin_mocha]
+background = "#1e1e2e"
+foreground = "#cdd6f4"
+dragon_red = "#f38ba8"
+dragon_green = "#a6e3a1"
+dragon_yellow = "#f9e2af"
+dragon_blue = "#89b4fa"
+dragon_magenta = "#cba6f7"
+dragon_cyan = "#94e2d5"
+dragon_orange = "#fab387"
+dragon_grey = "#585b70"
 
 # ------------------------------------------------------------------------------
 # Core UI Elements
@@ -112,7 +126,7 @@ format = '([$all_status$ahead_behind]($style) )'
 ahead     = "[⇡${count}](dragon_green) "
 behind    = "[⇣${count}](dragon_red) "
 modified  = "[✎${count}](dragon_yellow) "
-staged    = "[+${count}](dragon_bluen) "
+staged    = "[+${count}](dragon_blue) "
 untracked = "[?${count}](dragon_cyan) "
 
 # ------------------------------------------------------------------------------
@@ -122,16 +136,16 @@ untracked = "[?${count}](dragon_cyan) "
 [c]
 symbol = " "
 style = "dragon_yellow"
-format = 'via [$dragon_bluebol($version )]($style)'
+format = 'via [$symbol($version )]($style)'
 
 [docker_context]
 symbol = " "
-style = "dragonBlue"
+style = "dragon_blue"
 format = 'via [$symbol$context]($style) '
 
 [golang]
 symbol = " "
-style = "dragonBlue"
+style = "dragon_blue"
 format = 'via [$symbol($version )]($style)'
 
 [java]
@@ -146,13 +160,13 @@ format = 'via [$symbol($version )]($style)'
 
 [php]
 symbol = " "
-style = "dragonBlue"
+style = "dragon_blue"
 format = 'via [$symbol($version )]($style)'
 
 [python]
 symbol = "🐍 "
 style = "dragon_yellow"
-format = 'via [$dragon_bluebol($version )(\($virtualenv\) )]($style)'
+format = 'via [$symbol($version )(\($virtualenv\) )]($style)'
 
 [rust]
 symbol = " "

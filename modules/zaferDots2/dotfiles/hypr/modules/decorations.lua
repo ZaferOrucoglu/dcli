@@ -1,7 +1,7 @@
 -----------------------
 ---- LOOK AND FEEL ----
 -----------------------
-local colors = require("colors/kDragon")
+local colors = require("colors/cMocha")
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
     general = {
@@ -28,7 +28,7 @@ hl.config({
 
         -- Change transparency of focused and unfocused windows
         active_opacity   = 1.0,
-        inactive_opacity = 0.9,
+        inactive_opacity = 1.0,
 
         shadow           = {
             enabled      = true,

@@ -4,7 +4,7 @@
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "nautilus"
+local fileManager = "nautilus -w"
 -- local menu        = "~/.config/rofi/type-2/launcher.sh"
 local menu        = "vicinae toggle"
 ---------------------

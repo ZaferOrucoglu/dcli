@@ -1,4 +1,4 @@
-@import "colors/kDragon.css";
+@import "theme.css";
 
 @define-color accent_color @blue;
 @define-color accent_fg_color @bg0;
