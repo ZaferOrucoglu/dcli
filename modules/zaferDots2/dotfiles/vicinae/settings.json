@@ -17,7 +17,7 @@
    },
    "theme": {
       "dark": {
-         "name": "kanagawa"
+         "name": "catppuccin-mocha"
       }
    },
    "providers": {

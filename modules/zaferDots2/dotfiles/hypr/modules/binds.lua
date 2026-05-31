@@ -22,6 +22,8 @@ hl.bind(mainMod .. " + C",
     hl.dsp.exec_cmd(
         "/usr/bin/codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"))
 hl.bind(mainMod .. " + V", hl.dsp.exec_cmd("vicinae vicinae://launch/clipboard/history?toggle=true"))
+hl.bind(mainMod .. " + B",
+    hl.dsp.exec_cmd("vicinae vicinae://launch/@sovereign/store.vicinae.awww-switcher/wpgrid?toggle=true"))
 
 -- screenshot & window management
 hl.bind(mainMod .. " + SHIFT + Q", hl.dsp.window.close())

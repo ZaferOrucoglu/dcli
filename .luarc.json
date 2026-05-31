@@ -1,5 +1,11 @@
 {
-  "workspace.library": [".lua", "/usr/share/hypr/stubs"],
-  "diagnostics.globals": ["dcli"],
-  "runtime.version": "Lua 5.4"
+  "diagnostics": {
+    "globals": ["vim", "dcli"]
+  },
+  "runtime": {
+    "version": "LuaJIT"
+  },
+  "workspace": {
+    "library": [".lua", "/usr/share/hypr/stubs"]
+  }
 }

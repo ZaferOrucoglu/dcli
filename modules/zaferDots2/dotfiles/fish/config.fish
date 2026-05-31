@@ -3,6 +3,10 @@ if status is-interactive
     set fish_greeting
 end
 
+function nvim
+    command nvim --listen /tmp/nvim.pipe $argv
+end
+
 starship init fish | source
 fish_add_path /home/zafer/.spicetify
 

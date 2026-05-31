@@ -22,7 +22,7 @@
   "agent": {
     "default_model": {
       "provider": "opencode",
-      "model": "free/nemotron-3-super-free",
+      "model": "free/big-pickle",
       "enable_thinking": false
     },
     "dock": "right",
