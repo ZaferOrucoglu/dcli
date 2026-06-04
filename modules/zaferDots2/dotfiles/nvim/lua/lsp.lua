@@ -28,4 +28,5 @@ vim.lsp.enable({
     "marksman",
     "gopls",
     "rust_analyzer",
+    "qmlls", 
 })

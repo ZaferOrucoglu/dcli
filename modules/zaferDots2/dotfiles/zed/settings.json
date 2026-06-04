@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "vim_mode": false,
   "language_models": {
     "opencode": {
       "show_go_models": true
@@ -22,7 +23,7 @@
   "agent": {
     "default_model": {
       "provider": "opencode",
-      "model": "free/big-pickle",
+      "model": "free/nemotron-3-super-free",
       "enable_thinking": false
     },
     "dock": "right",

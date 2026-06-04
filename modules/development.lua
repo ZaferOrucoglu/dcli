@@ -4,7 +4,11 @@ local packages = {
     "git",
     "zed",
     "vscodium",
-    "opencode"
+    "opencode",
+    "nvidia-container-toolkit",
+    "qemu-full",
+    "vm-curator-bin",
+    -- antigravity-ide
 }
 
 local services = {

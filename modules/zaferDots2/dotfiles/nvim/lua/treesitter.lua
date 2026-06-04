@@ -3,7 +3,8 @@ local treesitter = require("nvim-treesitter")
 local ensure_installed = {
     "rust", "typescript", "javascript", "tsx",
     "html", "css", "json", "bash",
-    "dockerfile", "lua", "java", "yaml", "toml"
+    "dockerfile", "lua", "java", "yaml", "toml",
+    "qmljs", "qmldir"
 }
 
 treesitter.install(ensure_installed)

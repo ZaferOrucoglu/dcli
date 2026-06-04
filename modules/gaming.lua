@@ -9,7 +9,9 @@ local packages = {
     "atlauncher-bin",
     "bottles",
     "crossmacro",
-    "flatpak:it.mijorus.gearlever"
+    "flatpak:it.mijorus.gearlever",
+    "fuse2",
+    "faugus-launcher"
 }
 
 return {

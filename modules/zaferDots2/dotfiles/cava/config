@@ -254,7 +254,7 @@ bar_height = 32
 # use theme file instead of defining colors in this file
 # themes are located in $HOME/.config/cava/themes
 
-theme = 'kDragon' # theme selected by themesw
+theme = 'cMocha'
 
 
 [smoothing]

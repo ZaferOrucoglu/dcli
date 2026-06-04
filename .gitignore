@@ -1,2 +1,3 @@
 # System packages merged from host (auto-generated, host-specific)
 system-packages-*.yaml
+adw-gtk-theme 6.5-1

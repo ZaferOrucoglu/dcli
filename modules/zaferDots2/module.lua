@@ -1,7 +1,9 @@
 local packages = {
     "hyprland",
     "hyprshot",
+    "hyprpicker",
     "xdg-desktop-portal-hyprland",
+    "xdg-utils",
     "nautilus",
     "file-roller",
     "unzip",
@@ -21,9 +23,8 @@ local packages = {
     "kitty",
     "fish",
     "starship",
-    "vicinae",
+    "vicinae", -- or rofi
     "ttf-jetbrains-mono-nerd",
-    "ttf-geist",
     "cava",
     "gpsd",
     "neovim",
@@ -34,25 +35,27 @@ local packages = {
     "papirus-icon-theme",
     "papirus-folders",
     "ttf-liberation",
+    "adw-gtk-theme",
     "gtk-engine-murrine",
     "nwg-look",
     "qt6ct",
     "kvantum",
     "qt6gtk2",
+    "qt5-wayland",
+    "qt6-wayland",
     "qt5-styleplugins",
     "wlogout",
     "wl-clipboard",
     -- others
     "brightnessctl",
     "overskride-bin",
-    "easyeffects",
     "helium-browser-bin",
-    "protonplus",
     "tree",
     "vesktop",
     "btop",
     "pavucontrol",
     "sassc",
+    "cmatrix"
 }
 
 return {
