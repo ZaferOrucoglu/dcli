@@ -93,4 +93,20 @@ MiniDiff.setup({
 vim.keymap.set("n", "<leader>gg", "<cmd>tabnew | Git | only<cr>", { desc = "Fugitive Full Page New Tab" })
 vim.keymap.set("n", "<leader>gd", "<cmd>Gvdiffsplit<CR>", { desc = "Git diff split", })
 
+vim.keymap.set("i", "<Tab>", function()
+    if vim.fn.pumvisible() == 1 then
+        return "<C-n>"
+    end
+    return "<Tab>"
+end, { expr = true, desc = "Tab completion" })
+
+vim.keymap.set("i", "<S-Tab>", function()
+    if vim.fn.pumvisible() == 1 then
+        return "<C-p>"
+    end
+    return "<S-Tab>"
+end, { expr = true, desc = "Shift-Tab completion" })
+
+require("mini.pairs").setup()
+
 require("lsp")

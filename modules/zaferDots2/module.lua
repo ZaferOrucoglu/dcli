@@ -55,7 +55,9 @@ local packages = {
     "btop",
     "pavucontrol",
     "sassc",
-    "cmatrix"
+    "cmatrix",
+    "qt6-svg",
+    "qt5compat"
 }
 
 return {

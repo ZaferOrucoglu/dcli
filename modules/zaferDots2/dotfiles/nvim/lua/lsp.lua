@@ -28,5 +28,9 @@ vim.lsp.enable({
     "marksman",
     "gopls",
     "rust_analyzer",
-    "qmlls", 
+    "qmlls"
+})
+
+vim.lsp.config("qmlls", {
+    cmd = { "qmlls6", "-E", "-I", "/usr/lib/qt6/qml" },
 })
