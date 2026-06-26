@@ -31,8 +31,8 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("hyprshot -m region --raw --f
 hl.bind(mainMod .. " + M",
     hl.dsp.exec_cmd("wlogout"))
 hl.bind(mainMod .. " + SHIFT + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
-hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("swaync-client -t -sw"))
+-- hl.bind(mainMod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/scripts/launch.sh"))
+hl.bind(mainMod .. " + N", hl.dsp.exec_cmd("qs -p ~/.config/quickshell/zaferShell/shell.qml ipc call notifications toggle"))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + F", hl.dsp.layout("colresize +conf"))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())

@@ -4,7 +4,7 @@ local ensure_installed = {
     "rust", "typescript", "javascript", "tsx",
     "html", "css", "json", "bash",
     "dockerfile", "lua", "java", "yaml", "toml",
-    "qmljs"
+    "qmljs", "nix", "bash"
 }
 
 treesitter.install(ensure_installed)

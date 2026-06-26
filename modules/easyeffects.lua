@@ -7,4 +7,5 @@ local packages = {
 return {
     description = "EasyEffects installation module.",
     packages = packages,
+    post_install_hook = "scripts/deepfilternet.sh"
 }

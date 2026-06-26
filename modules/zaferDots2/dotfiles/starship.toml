@@ -30,7 +30,7 @@ $character"""
 # ------------------------------------------------------------------------------
 # Color Palette
 # ------------------------------------------------------------------------------
-palette = "kanagawa_dragon"
+palette = "catpuccin_mocha"
 
 [palettes.kanagawa_dragon]
 background = "#181616"

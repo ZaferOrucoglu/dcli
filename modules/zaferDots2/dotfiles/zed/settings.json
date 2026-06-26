@@ -35,6 +35,11 @@
       "type": "registry"
     },
     "opencode": {
+      "default_config_options": {
+        "mode": "plan",
+        "effort": "max",
+        "model": "opencode/deepseek-v4-flash-free"
+      },
       "type": "registry"
     },
     "github-copilot-cli": {

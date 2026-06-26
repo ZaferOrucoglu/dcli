@@ -1,19 +1,26 @@
 local packages = {
-    "docker",
-    "docker-compose",
     "git",
+    "curl",
+    "wget",
     "zed",
+    "neovim",
+    "tree-sitter",
+    "tree-sitter-cli",
+    "lua-language-server",
+    "bash-language-server",
+    "filezilla",
+    "remmina",
     "vscodium",
     "opencode",
+    "podman",
+    "podman-compose",
     "nvidia-container-toolkit",
     "qemu-full",
     "vm-curator-bin",
-    -- antigravity-ide
 }
 
 local services = {
     enabled = {
-        "docker"
     },
 
     disabled = {

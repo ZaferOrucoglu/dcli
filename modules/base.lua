@@ -6,25 +6,13 @@ local packages = {
     -- Essential base system
     "base",
     "base-devel",
-
-    -- Kernel (uncomment the one you use)
-    -- "linux",              -- Standard kernel
-    -- "linux-zen",          -- Zen kernel (optimized for desktop)
-    -- "linux-lts",          -- Long-term support kernel
-
-    -- Firmware
-    -- "linux-firmware",
-
-    -- Basic tools
-    -- "git",
-    -- "vim",
-    -- "neovim",
-    -- "htop",
-
-    -- dcli dependencies (uncomment as needed)
-    -- "yay",       -- AUR helper
-    -- "fzf",                -- Fuzzy finder (for dcli TUI)
+    "flatpak",
+    "linux-zen",          -- Zen kernel (optimized for desktop)
+    "linux-firmware",
+    "yay",       -- AUR helper
+    "fzf",                -- Fuzzy finder (for dcli TUI)
     "timeshift",               -- System backup tool
+    "earlyoom",
 }
 
 -- Add CPU microcode based on vendor
@@ -40,4 +28,5 @@ end
 return {
     description = "Base system packages",
     packages = packages,
+    services = {enabled = {"earlyoom"}, disabled = {}}
 }

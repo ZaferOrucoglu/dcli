@@ -16,6 +16,9 @@
       }
    },
    "theme": {
+      "light": {
+         "name": "catppuccin-mocha"
+      },
       "dark": {
          "name": "catppuccin-mocha"
       }
@@ -26,7 +29,7 @@
             "wallpaperPath": "~/Pictures/Wallpapers",
             "colorGenTool": "none",
             "gridRows": "4",
-            "postCommand": "themesw",
+            "postCommand": "bash -c ~/.local/bin/themesw",
             "postProduction": "no",
             "showImageDetails": true,
             "toggleVicinaeSetting": true,

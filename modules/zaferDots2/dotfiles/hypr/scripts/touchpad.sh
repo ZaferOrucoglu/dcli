@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 STATUS_FILE="/tmp/touchpad.status"
 DEVICE="elan0412:01-04f3:3240-touchpad"
 

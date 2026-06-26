@@ -28,9 +28,41 @@ vim.lsp.enable({
     "marksman",
     "gopls",
     "rust_analyzer",
-    "qmlls"
+    "qmlls",
+    "nixd",
+    "bashls"
 })
 
 vim.lsp.config("qmlls", {
     cmd = { "qmlls6", "-E", "-I", "/usr/lib/qt6/qml" },
+})
+
+vim.lsp.config("nixd", {
+    cmd = {"nixd"};
+    settings = {
+        nixd = {
+            nixpkgs = {
+                expr = "import <nixpkgs> {}",
+            },
+            formatting = {
+                command = {"alejandra"},
+            },
+            options = {
+                nixos = {
+                    expr = '(builtins.getFlake (builtins.toString ./. )).nixosConfigurations.nixosBTW.options',
+                },
+                ["home-manager"] = {
+                    expr = '(builtins.getFlake (builtins.toString ./. )).nixosConfigurations.nixosBTW.options.home-manager.users.type.getSubOptions []',
+                },
+            },
+        },
+    },
+})
+
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, { desc = "Format Local buffer" })
+vim.api.nvim_create_autocmd("BufWritePre", {
+    pattern = "*.nix",
+    callback = function()
+        vim.lsp.buf.format({ async = false })
+    end,
 })
