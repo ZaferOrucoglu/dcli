@@ -1,0 +1,4 @@
+module components
+Island 1.0 Island.qml
+NotificationCard 1.0 NotificationCard.qml
+DismissLayer 1.0 DismissLayer.qml

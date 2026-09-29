@@ -1,0 +1,97 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+//
+// nvim'den taşındı: modules/zaferDots2/dotfiles/nvim/lua/{keymaps,lsp,pack}.lua
+// leader = space (nvim'deki <leader>)
+[
+  {
+    // normal + visual (nvim'deki n,v karşılıkları)
+    "context": "VimControl && !menu",
+    "bindings": {
+      // n,v <leader>d -> yanksız sil (nvim: "_d)
+      "space d": "editor::Delete",
+      // n <C-d> / <C-u> -> yarım sayfa + ortala (nvim: <C-d>zz / <C-u>zz)
+      "ctrl-d": ["workspace::SendKeystrokes", "ctrl-d z z"],
+      "ctrl-u": ["workspace::SendKeystrokes", "ctrl-u z z"],
+      // n n / N -> sonraki/önceki sonuç + ortala (nvim: nzzzv / Nzzzv)
+      "n": ["workspace::SendKeystrokes", "n z z"],
+      "shift-n": ["workspace::SendKeystrokes", "shift-n z z"],
+      // n <leader>s -> kelimeyi buffer'da değiştir (nvim: :%s/<cword>/<cword>/gI)
+      // Zed'de: tüm eşleşmeleri seç, yazarak değiştir
+      "space s": "editor::SelectAllMatches",
+      // n <leader>f -> format (lsp.lua: vim.lsp.buf.format)
+      "space f": "editor::Format",
+      // n df -> diagnostic float (lsp.lua: vim.diagnostic.open_float)
+      // nvim'deki `d f` delete-operator ile çakıştığı için space-e'ye alındı
+      "space e": "editor::Hover",
+      // n gd -> definition (lsp.lua, Zed default ile aynı, explicit)
+      "g d": "editor::GoToDefinition",
+      // n <leader>pf -> dosya bul (pack.lua: MiniPick.files)
+      "space p f": "file_finder::Toggle",
+      // n <leader>ps -> kelimeyi projede ara (pack.lua: MiniPick.grep cword)
+      "space p s": "pane::DeploySearch",
+      // n <leader>vh -> yardım (pack.lua: MiniPick.help)
+      "space v h": "zed::OpenDocs",
+      // n <leader>xx -> diagnostic listesi (pack.lua: MiniExtra.diagnostic)
+      "space x x": "diagnostics::Deploy",
+      // n <leader>pk -> keymap ara (pack.lua: MiniExtra.keymaps)
+      "space p k": "zed::OpenKeymap",
+      // n <leader>gg -> git panel (pack.lua: Fugitive)
+      "space g g": "git_panel::ToggleFocus",
+      // n <leader>gd -> git diff (pack.lua: Gvdiffsplit)
+      "space g d": "git::Diff",
+      // n <leader>- -> mevcut dosyayı ağaçta göster (pack.lua: MiniFiles reveal)
+      "space -": "pane::RevealInProjectPanel",
+      // n <leader>re -> :restart (nvim config restart)
+      // Zed'de zed::Restart yok, en yakın: LSP restart
+      "space r e": "editor::RestartLanguageServer"
+      // NOTLAR (Zed karşılığı yok):
+      // - <leader>X (chmod +x %) -> terminalden yap: chmod +x %
+      // - <leader>u (undotree) -> Zed'de undotree paneli yok, u / ctrl-r ile undo/redo kullan
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {
+      // n <C-c> -> highlight temizle (nvim: :nohlsearch)
+      "ctrl-c": "editor::Cancel",
+      // n J -> satır birleştir, cursor sabit (nvim: mzJ`z)
+      "shift-j": "vim::JoinLines",
+      // n - -> dosya ağacı (nvim: MiniFiles.open)
+      // nvim'deki gibi vim'in `-` (PreviousLineStart) hareketini ezer
+      "-": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "vim_mode == visual && !menu",
+    "bindings": {
+      // x p -> yank'i kaybetmeden paste (nvim: "_dP)
+      "p": ["vim::Paste", { "preserve_clipboard": true }],
+      // v J / K -> seçimi aşağı/yukarı taşı (nvim: :m '>+1 / '<-2)
+      // Zed default'undaki visual shift-j (JoinLines) ezilir, join için `g shift-j` kullan
+      "shift-j": "editor::MoveLineDown",
+      "shift-k": "editor::MoveLineUp",
+      // v < / > -> indent, seçimi koru (nvim: <gv / >gv)
+      "<": "vim::Outdent",
+      ">": "vim::Indent"
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert",
+    "bindings": {
+      // i <C-c> -> Esc (nvim)
+      "ctrl-c": "vim::NormalBefore"
+    }
+  },
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space p f": "file_finder::Toggle"
+    }
+  }
+]

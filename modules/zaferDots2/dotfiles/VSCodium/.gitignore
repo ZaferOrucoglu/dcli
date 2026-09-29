@@ -1,0 +1,44 @@
+# VSCodium is a live Electron profile – only track real user config.
+# Everything else is cache / machine-specific state.
+
+# ── Chromium / Electron caches ──
+Cache/
+Code Cache/
+GPUCache/
+DawnGraphiteCache/
+DawnWebGPUCache/
+blob_storage/
+CachedData/
+CachedConfigurations/
+CachedExtensionVSIXs/
+CachedProfilesData/
+Crashpad/
+Dictionaries/
+Service Worker/
+Session Storage/
+Shared Dictionary/
+WebStorage/
+Local Storage/
+Backups/
+
+# ── Machine / identity / browsing state – never commit ──
+Cookies
+Cookies-journal
+DIPS
+Preferences
+Local State
+Network Persistent State
+TransportSecurity
+Trust Tokens
+Trust Tokens-journal
+SharedStorage
+machineid
+languagepacks.json
+
+# ── VSCode workspace / extension runtime state ──
+User/History/
+User/workspaceStorage/
+User/globalStorage/
+*.vscdb
+*.vscdb.backup
+*.log

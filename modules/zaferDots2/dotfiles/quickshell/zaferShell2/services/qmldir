@@ -1,0 +1,3 @@
+module Services
+singleton Notifications 1.0 Notifications.qml
+singleton Battery 1.0 Battery.qml

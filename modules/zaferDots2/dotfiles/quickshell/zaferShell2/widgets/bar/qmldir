@@ -1,0 +1,3 @@
+module barWidgets
+Clock 1.0 Clock.qml
+Center 1.0 Center.qml

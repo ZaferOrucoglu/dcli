@@ -1,0 +1,137 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "theme": "system",
+  // Not: v2'de subagent_depth kaldirildi (unsupported -> omit ediliyor).
+  // Yuva derinligi bunun yerine subagent kurallariyla tutuluyor:
+  // global task=ask + explore/general/web-researcher task=deny. Bunu gevsetme.
+  "permission": {
+    // LAST-MATCH-WINS: geniş kural önce, dar ret en sonda.
+    "bash": {
+      "*": "ask",
+      "git status*": "allow",
+      "git diff*": "allow",
+      "git log*": "allow",
+      "ls*": "allow",
+      "pwd": "allow",
+      "*curl*": "deny",
+      "*wget*": "deny",
+      "*aria2c*": "deny",
+      "*axel*": "deny",
+      "*| *sh*": "deny",
+      "*|sh*": "deny",
+      "*| *bash*": "deny",
+      "*|bash*": "deny",
+      "*| *dash*": "deny",
+      "*| *zsh*": "deny",
+      "*| *fish*": "deny",
+      "*curl*|*": "deny",
+      "*wget*|*": "deny",
+      "*python* -c*": "deny",
+      "*python*-c*": "deny",
+      "*chmod +x*": "deny",
+      "*chmod*+x*": "deny",
+      "*tar*xf*": "deny",
+      "*tar* x*": "deny",
+      "*unzip*": "deny",
+      "*7z x*": "deny",
+      "*7z* x*": "deny",
+      "*unrar*": "deny",
+      "*bsdtar*x*": "deny",
+      "*opencode*--auto*": "deny",
+      "*OPENCODE_CONFIG*": "deny",
+      "*OPENCODE_DISABLE*": "deny",
+      "*OPENCODE_PURE*": "deny",
+      "*pastebin.com*": "deny",
+      "*transfer.sh*": "deny",
+      "*ngrok*": "deny",
+      "*webhook.site*": "deny",
+      "*pipedream.net*": "deny",
+      "*requestbin*": "deny",
+      "*oastify.com*": "deny",
+      "*burpcollaborator*": "deny",
+      "*interact.sh*": "deny"
+    },
+    "task": {
+      "*": "ask"
+    },
+    "read": {
+      "*": "allow",
+      "*.env": "ask",
+      "*.env.*": "ask",
+      "~/.ssh/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/api.txt": "deny",
+      "~/.claude.json": "deny",
+      "~/.local/share/opencode/auth.json": "deny"
+    },
+    "edit": {
+      "*": "ask",
+      "/tmp/opencode-scratch/**": "allow",
+      "~/.ssh/**": "deny",
+      "~/.gnupg/**": "deny",
+      "~/api.txt": "deny"
+    },
+    "external_directory": {
+      "*": "ask",
+      "/tmp/opencode/*": "allow",
+      "/tmp/opencode-scratch/*": "allow",
+      "/tmp/opencode-scratch/**": "allow",
+      "~/.local/share/opencode/tool-output/*": "allow",
+      "~/.local/share/opencode/tool-output/**": "allow",
+      "~/.ssh/*": "deny",
+      "~/.ssh/**": "deny",
+      "~/.gnupg/*": "deny",
+      "~/.gnupg/**": "deny",
+      "~/api.txt": "deny",
+      "~/.claude.json": "deny",
+      "~/.local/share/opencode/auth.json": "deny"
+    },
+    "webfetch": "ask",
+    "websearch": "ask",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "question": "allow",
+    "todowrite": "allow",
+    "doom_loop": "ask",
+    "lsp": "allow",
+    "skill": "ask"
+  },
+  "agent": {
+    "explore": {
+      "description": "Fast read-only codebase explorer. No edits, no shell, no subagents.",
+      "mode": "subagent",
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "task": "deny",
+        "webfetch": "ask",
+        "websearch": "ask"
+      }
+    },
+    "general": {
+      "description": "General worker. Least privilege, cannot launch nested subagents.",
+      "mode": "subagent",
+      "permission": {
+        "task": {
+          "*": "deny"
+        }
+      }
+    },
+    "web-researcher": {
+      "description": "Use ONLY for browsing unknown sites, archives and repos. Only fetch and search, no shell, no edits, no subagents.",
+      "mode": "subagent",
+      "permission": {
+        "read": "deny",
+        "edit": "deny",
+        "bash": "deny",
+        "task": "deny",
+        "glob": "deny",
+        "grep": "deny",
+        "list": "deny",
+        "webfetch": "ask",
+        "websearch": "ask"
+      }
+    }
+  }
+}

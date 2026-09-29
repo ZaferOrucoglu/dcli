@@ -1,0 +1,64 @@
+# ── dcli generated / host-specific ──
+# System packages merged from host (auto-generated, host-specific)
+system-packages-*.yaml
+# dcli runtime state (also covered by state/.gitignore)
+state/*
+!state/.gitignore
+config-backups/
+*.tar.gz
+hosts/*.local.yaml
+hosts/*.local.yml
+
+# ── Secrets – never commit ──
+*.env
+.env*
+*.pem
+*.key
+*secret*
+credentials*.json
+auth.json
+**/auth.json
+**/service.json
+**/*token*.json
+
+# ── OS junk ──
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo
+*.bak
+.directory
+
+# ── Editors / IDE ──
+.vscode/
+.idea/
+*.code-workspace
+
+# ── Node / build (opencode plugins etc.) ──
+**/node_modules/
+dist/
+build/
+.cache/
+*.log
+
+# ── Shell – machine-specific ──
+**/fish_variables
+**/.fish_history
+**/fish_history
+
+# ── Neovim ──
+**/.netrwhist
+**/shada/
+*.shada
+*.shm
+*.swap
+
+# ── Zed (local db/logs, extensions are machine-managed) ──
+**/zed/db/
+**/zed/logs/
+**/zed/extensions/
+*.zed.log
+
+# ── Quickshell / QML ──
+*.qmlc

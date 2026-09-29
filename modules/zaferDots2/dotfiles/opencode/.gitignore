@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+.cache/
+*.log
+
+# Secrets / machine-local runtime – never commit.
+# service.json currently contains a plaintext password.
+service.json
+auth.json
+.opencode/
